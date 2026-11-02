@@ -7,14 +7,17 @@ import {
 } from "react-admin";
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
+import { ProductList } from "./products/ProductList";
+import { ProductCreate } from "./products/ProductCreate";
+import { ProductEdit } from "./products/ProductEdit";
 
 export const App = () => (
     <Admin layout={Layout} dataProvider={dataProvider}>
         <Resource
             name="products"
-            list={ListGuesser}
-            edit={EditGuesser}
-            show={ShowGuesser}
+            list={ProductList}
+            edit={ProductEdit}
+            create={ProductCreate}
         />
         <Resource
             name="categories"
